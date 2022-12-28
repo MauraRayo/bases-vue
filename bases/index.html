@@ -11,11 +11,13 @@
         <!-- Control absoluto del DIV -->
     <div id="myApp">
 
-     
+        <h3> {{ quote }}</h3>
+        <blockquote> -{{ author }}</blockquote>
 
 
-
-        
+        <button v-on:click="changeQuote">
+            change quote
+        </button>
 
     </div>
     <script src="app.js"></script>

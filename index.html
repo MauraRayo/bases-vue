@@ -10,7 +10,12 @@
 <body>
         <!-- Control absoluto del DIV -->
     <div id="myApp">
-     <h1>Frases</h1>
+     <h1>Frases  <small>{{newQuote}}</small></h1>
+     <input
+      type="text"
+      v-model="newQuote"
+      v-on:keypress.enter="addQuote">
+     <hr>
  
         <ul>
          <li v-for="({quote, author}, index )  in quotes">

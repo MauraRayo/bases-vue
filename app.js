@@ -7,14 +7,20 @@ const app = Vue.createApp({
 data() {
     return {
         quote: "Aqui van las frases",
-        author: "Nombre del autor"
+        author: "Bruce Wayne"
     }
 },
 methods: {
- changeQuote(){
-    console.log("Has cambiado el nombre del botón")
- }
-    
+ changeQuote(event ){
+    console.log("Has cambiado el nombre del botón", event)
+    this.author = "Maura Rayo"
+
+    this.capitalize()
+},
+capitalize(){
+    this.changeQuote = this.quote.toUpperCase()
+}
+  
 },
 
 })
